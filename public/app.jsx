@@ -1,4 +1,4 @@
-
+//GITLAB
 //Greeter Message Component
 var GreeterMessage = React.createClass({
     render: function(){
