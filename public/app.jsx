@@ -59,7 +59,6 @@ var GreeterForm = React.createClass({
 
 
 //takes an Options object as its argument
-//GREETER COMPONENT
 var Greeter = React.createClass({
 
     getDefaultProps: function(){
