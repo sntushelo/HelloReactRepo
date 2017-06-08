@@ -1,5 +1,5 @@
 
-
+//Greeter Message Component
 var GreeterMessage = React.createClass({
     render: function(){
         var name = this.props.name;
@@ -13,6 +13,7 @@ var GreeterMessage = React.createClass({
 });
 
 
+//Greeter Form Component
 var GreeterForm = React.createClass({
 
     onFormSubmit: function(e){
