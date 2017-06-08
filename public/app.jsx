@@ -59,6 +59,7 @@ var GreeterForm = React.createClass({
 
 
 //takes an Options object as its argument
+//Greeter Component = Container
 var Greeter = React.createClass({
 
     getDefaultProps: function(){
@@ -74,30 +75,6 @@ var Greeter = React.createClass({
             message: this.props.message
         };
     },
-    //UPDATE the state with values from the FORM
-/*    onButtonClick: function(e){
-        e.preventDefault();//Prevent form from Submitting and  causing Page Refresh
-        
-        var nameRef = this.refs.name;
-        var name = nameRef.value; //store this textbox value in a variable called name
-        nameRef.value = '';
-        if(typeof name === 'string' && name.length > 0){
-            this.refs.name.value = '';//Clear the textbox value using refs.name
-            this.setState({
-                name: name
-            });
-        }  
-
-        var msgRef = this.refs.txtmsg;
-        var msg = msgRef.value;
-        if(typeof msg === 'string' && msg.length > 0){
-            this.refs.txtmsg.value = '';//clear the msg textbox using refs.txtmsg
-            this.setState({
-                message: msg                
-            });
-        }
-    },
-*/
 
     //This message is Property
     handleNewName: function(name){
@@ -122,25 +99,11 @@ var Greeter = React.createClass({
         return (            
             <div>                       
                 <GreeterMessage name={name} message={message} />
-                <GreeterForm onNewData={this.handleNewData} />
-                {/*<GreeterForm onNewName={this.handleNewName} onNewMessage={this.handleNewMessage} />*/}
+                <GreeterForm onNewData={this.handleNewData} />                
             </div>
         );
     }
-
-    /*render: function(){
-        var name = this.state.name;
-        var message = this.props.message;
-        return (
-            <div>                       
-                <GreeterMessage name={name} message={message}/>
-                <form onSubmit={this.onButtonClick}>
-                    <input type="text" ref="name"/>
-                    <button>Set Name</button>
-                </form>
-            </div>
-        );
-    }*/
+    
 });
 
 var firstname = 'Andrews';
